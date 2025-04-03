@@ -49,7 +49,10 @@ const Main = () => {
                         }
                         console.log("Cookies:::", cooki);
 
-                        if (cooki) {
+                        if (!cooki) {
+                                alert("Please fill the form")
+
+                        } else {
 
                                 //send to server to verify
                                 const response2 = await axios.post("http://localhost:6082/cookieVerify", Cookie, {
@@ -69,9 +72,6 @@ const Main = () => {
                                         dispatch(boolean({ boole: response2.data.Boolean }));
                                 }
 
-
-                        } else {
-                                console.log("Cookie is not Available")
                         }
                 }
 
