@@ -22,7 +22,7 @@ const Upload = () => {
         const fetchImages = async () => {
                 try {
                         // console.log("Before:::");
-                        const res = await axios.get("http://localhost:6079/images");
+                        const res = await axios.get("https://backend-product-server.vercel.app/images");
                         // console.log("After::",res.data)
                         setImages(res.data);
                 } catch (error) {
@@ -98,10 +98,10 @@ const Upload = () => {
 
                 try {
                         const responses = await Promise.allSettled([
-                                await axios.post("http://localhost:6079/uploadImage", formData, {
+                                await axios.post("https://backend-product-server.vercel.app/uploadImage", formData, {
                                         headers: { "Content-Type": "multipart/form-data" }
                                 }),
-                                await axios.post("http://localhost:6079/productInfo", productInfo, {
+                                await axios.post("https://backend-product-server.vercel.app/productInfo", productInfo, {
                                         headers: { "Content-Type": "application/json" }
                                 })
 

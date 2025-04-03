@@ -34,7 +34,7 @@ const Main = () => {
 
                 const fetchData = async () => {
 
-                        const response = await axios.get("https://product-server-alpha.vercel.app/product", {
+                        const response = await axios.get("https://backend-product-server.vercel.app/product", {
                                 headers: { "Content-Type": "application/json" }
                         });
         
