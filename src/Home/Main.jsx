@@ -46,6 +46,7 @@ const Main = () => {
 
                 if (!cooki) {
                         alert("Please fill the form")
+                        navigate('/')
 
                 } else {
 
