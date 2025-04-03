@@ -70,8 +70,6 @@ const Main = () => {
                                 }
 
 
-                        } else {
-                                alert("You are not Loged In Please LogedIn First");
                         }
                 }
 
