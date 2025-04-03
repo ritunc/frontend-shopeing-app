@@ -26,20 +26,21 @@ const Main = () => {
 
 
 
-        const fetchData = async () => {
-
-                const response = await axios.get("https://product-server-alpha.vercel.app/product", {
-                        headers: { "Content-Type": "application/json" }
-                });
-
-                setItem(response.data);
-
-        }
+    
 
 
 
         useEffect(() => {
 
+                const fetchData = async () => {
+
+                        const response = await axios.get("https://product-server-alpha.vercel.app/product", {
+                                headers: { "Content-Type": "application/json" }
+                        });
+        
+                        setItem(response.data);
+        
+                }
                 fetchData();
 
         }, []);
