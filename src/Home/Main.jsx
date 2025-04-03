@@ -30,20 +30,20 @@ const Main = () => {
 
 
 
-        // useEffect(() => {
+        useEffect(() => {
 
-        //         const fetchData = async () => {
+                const fetchData = async () => {
 
-        //                 const response = await axios.get("https://product-server-alpha.vercel.app/product", {
-        //                         headers: { "Content-Type": "application/json" }
-        //                 });
+                        const response = await axios.get("https://product-server-alpha.vercel.app/product", {
+                                headers: { "Content-Type": "application/json" }
+                        });
         
-        //                 setItem(response.data);
+                        setItem(response.data);
         
-        //         }
-        //         fetchData();
+                }
+                fetchData();
 
-        // }, []);
+        }, []);
 
         // console.log("Card::Data:", item[0].imageUrl);  
         // console.log("Card::Data:", item.length > 0 ? item[0].imageUrl : "No data yet");
