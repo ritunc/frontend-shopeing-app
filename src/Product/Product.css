@@ -1,0 +1,248 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+.ProductMain {
+        padding: 0.3rem 0;
+        border: 1px solid black;
+}
+
+.ProductMainContainer {
+        border: 1px solid rgb(185, 193, 20);
+        max-width: 1270px;
+        margin: 0 auto;
+
+
+        display: flex;
+
+        gap: 10px;
+        background-color: #FFFFFF;
+}
+
+
+
+.ProductMain2ndContainer {
+        border: 1px solid rgb(180, 9, 149);
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+}
+
+.ProductMain2ndContainerIn {
+        position: relative;
+        border: 1px solid black;
+        /* Takes all available space */
+        overflow-y: auto;
+        /* Enables vertical scrolling */
+
+        width: 100%;
+        padding: 10px;
+        max-height: 70vh;
+
+}
+
+.icon_product {
+        /* width: 100%; */
+        /* color: black; */
+        /* border:1px solid black; */
+        /* padding: 12px 5px; */
+        /* border-radius: 13px;
+        padding: 5px;
+        cursor: pointer;
+        position: sticky;
+        top:100px;
+        left:320px;
+        background-color: rgb(201, 230, 241); */
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 24px;
+        background-color: rgb(70, 187, 230);
+        color: white;
+        padding: 5px;
+        border-radius: 50%;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+
+}
+.icon_product:hover {
+        transform: scale(1.2);
+}
+.icon_product:active {
+        color: red;
+}
+
+.ProductMainContainerImg {
+        width: 100%;
+
+        border: 1px solid black;
+
+}
+
+.ProductMainBtn {
+        border: 1px solid black;
+
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        /* max-width: 500px; */
+
+
+
+}
+
+.btnBuy {
+        /* width: 100%; */
+
+        padding: 15px 70px;
+        font-size: 1.2rem;
+
+        background-color: rgb(8, 169, 8);
+        border: none;
+        outline: none;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+
+}
+
+.btnAddToCart {
+        /* width: 100%; */
+
+        padding: 15px 70px;
+        font-size: 1.2rem;
+
+        background-color: green;
+        border: none;
+        outline: none;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+
+}
+
+
+
+
+
+
+
+.ProductMain3rdContainerData {
+        width: 60%;
+        border: 1px solid black;
+
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+
+        padding: 5px 10px;
+
+        max-height: 700px;
+        gap: 10px;
+
+}
+.PriceContainer{
+        display: flex;
+        gap:10px;
+        justify-content: start;
+        align-items: center;
+}
+
+/*Menupulator product Content*/
+.ProductMainData {
+        display: none;
+}
+
+@media (max-width: 1180px) {
+
+        .btnBuy,
+        .btnAddToCart {
+                padding: 15px 40px;
+        }
+
+}
+
+@media (max-width: 880px) {
+
+        .btnBuy,
+        .btnAddToCart {
+                font-size: 1rem;
+                padding: 15px 40px;
+        }
+
+        .ProductMain2ndContainer {
+                gap: 24px;
+                width: 50%;
+        }
+
+}
+
+@media (max-width: 645px) {
+
+
+
+        .ProductMainContainer {
+                justify-content: center;
+        }
+
+        .ProductMain2ndContainer {
+                width: 100%;
+                justify-content: center;
+
+                overflow-y: auto;
+
+        }
+
+        .ProductMain3rdContainerData {
+                width: 100%;
+        }
+
+        .ProductMainBtn {
+                /* max-width: 1245px; */
+                /* position: fixed; */
+                /* bottom: 0px; */
+                /* top:460px; */
+
+                position: sticky;
+                bottom: 0;
+                gap: 3px;
+        }
+        .icon_product{
+                font-size: 15px;
+        }
+}
+
+@media (max-width: 325px) {
+
+        .btnBuy,
+        .btnAddToCart {
+                font-size: 0.8rem;
+                padding: 12px 35px;
+        }
+
+        .ProductMain2ndContainer {
+                gap: 34px;
+        }
+        .icon_product{
+                font-size: 12px;
+        }
+}
+
+@media (max-width: 274px) {
+
+        .btnBuy,
+        .btnAddToCart {
+                font-size: 0.8rem;
+                padding: 12px 28px;
+        }
+}
