@@ -70,6 +70,8 @@ const Main = () => {
                                 }
 
 
+                        } else {
+                                console.log("Cookie is not Available")
                         }
                 }
 
