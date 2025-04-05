@@ -8,7 +8,6 @@
         /* padding: 0.3rem 0; */
         /* padding: 0rem 0.3rem; */
         border: 1px solid black;
-        min-height: 100vh;
 }
 
 .ProductMainContainer {
@@ -35,11 +34,12 @@
         gap: 10px;
         position: relative;
         /* background-color: fuchsia; */
+        min-height: 100vh;
 }
 
 .ProductMain2ndContainerIn {
         position: relative;
-        /* border: 1px solid black; */
+        border: 1px solid black;
         /* Takes all available space */
         overflow-y: auto;
         /* Enables vertical scrolling */
@@ -47,6 +47,8 @@
         width: 100%;
         padding: 10px;
         /* max-height: 100vh; */
+
+        flex:1;
      
 
 }
@@ -91,16 +93,14 @@
 }
 
 .ProductMainBtn {
-        /* border: 1px solid black; */
+        border: 1px solid black;
 
         display: flex;
         justify-content: center;
         gap: 10px;
 
         /* max-width: 500px; */
-
-
-
+        /* flex:1; */
 }
 
 .btnBuy {
