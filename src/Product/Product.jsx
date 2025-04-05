@@ -76,7 +76,7 @@ const Product = () => {
 
                                                 </div>
 
-                                                <div className='ProductMainBtn'>
+                                                <div className={isMenuOpen ? 'ProductMainData' : 'ProductMainBtn'}>
                                                         <button className='btnBuy'><i className="fa-solid fa-store"></i> Buy</button>
                                                         <button className='btnAddToCart'><i className="fa-solid fa-cart-shopping"></i>Add to Cart</button>
                                                 </div>
@@ -100,6 +100,10 @@ const Product = () => {
 
                                 </section>
                         </main>
+                        <footer className={isMenuOpen ? 'ProductMainBtn' : 'ProductMainData'}>
+                                <button className='btnBuy'><i className="fa-solid fa-store"></i> Buy</button>
+                                <button className='btnAddToCart'><i className="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+                        </footer>
 
                 </>
         )
