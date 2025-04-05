@@ -36,6 +36,7 @@
         /* background-color: fuchsia; */
         min-height: 80vh;
         /* height: 100vh; */
+        z-index:-1;
 }
 
 .ProductMain2ndContainerIn {
@@ -105,6 +106,7 @@
         /* height:20% */
         position:fixed;
         bottom: 0px;
+        z-index: 1;
 }
 
 .btnBuy {
