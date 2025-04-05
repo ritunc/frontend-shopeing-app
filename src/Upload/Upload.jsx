@@ -94,7 +94,7 @@ const Upload = () => {
 
                 console.log("After ID generate",productInfo);
 
-                console.log("We entered")
+                console.log("We entered");
 
                 try {
                         const responses = await Promise.allSettled([
