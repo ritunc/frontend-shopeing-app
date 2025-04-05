@@ -34,7 +34,8 @@
         gap: 10px;
         position: relative;
         /* background-color: fuchsia; */
-        min-height: 100vh;
+        min-height: 90vh;
+        /* height: 100vh; */
 }
 
 .ProductMain2ndContainerIn {
@@ -101,6 +102,7 @@
 
         /* max-width: 500px; */
         /* flex:1; */
+        /* height:20% */
 }
 
 .btnBuy {
