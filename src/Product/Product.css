@@ -103,7 +103,7 @@
         /* max-width: 500px; */
         /* flex:1; */
         /* height:20% */
-        position:relative;
+        position:fixed;
         bottom: 0px;
 }
 
