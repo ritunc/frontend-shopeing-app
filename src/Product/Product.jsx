@@ -73,7 +73,7 @@ const Product = () => {
                                                                         architecto alias veniam eum soluta perspiciatis.
                                                                         Culpa voluptatibus quis eos nobis minus quibusdam
                                                                         aliquam odio minima maxime consequatur dolorum, cupiditate
-                                                                        modi et! Dolorem, esse repellat. Explicabo esse 
+                                                                        modi et! Dolorem, esse repellat. Explicabo esse
                                                                         mollitia tenetur? Incidunt itaque atque, ad id pariatur veniam.
                                                                 </p>
 
@@ -97,6 +97,18 @@ const Product = () => {
                                                         <p>{locationData.productMarketPrice}</p>
                                                         <p>{locationData.productDiscount}</p>
                                                 </div>
+                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Itaque assumenda suscipit ad eius facilis. Accusamus laudantium
+                                                        ad magnam vitae, accusantium quibusdam tempora ullam quasi
+                                                        aliquam iusto nesciunt totam, sed maxime?
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptate explicabo eos quis deleniti harum sint
+                                                        sequi, illo, ut in totam voluptatum temporibus exercitationem
+                                                        architecto alias veniam eum soluta perspiciatis.
+                                                        Culpa voluptatibus quis eos nobis minus quibusdam
+                                                        aliquam odio minima maxime consequatur dolorum, cupiditate
+                                                        modi et! Dolorem, esse repellat. Explicabo esse
+                                                        mollitia tenetur? Incidunt itaque atque, ad id pariatur veniam.
+                                                </p>
 
                                                 {/* <p>{locationData.}</p> */}
 
@@ -108,8 +120,8 @@ const Product = () => {
                                 </section>
                         </main>
                         <footer className={isMenuOpen ? 'ProductMainBtn' : 'ProductMainData'}>
-                                <button className='btnBuy'><i className="fa-solid fa-store"></i> Buy</button>
                                 <button className='btnAddToCart'><i className="fa-solid fa-cart-shopping"></i>Add to Cart</button>
+                                <button className='btnBuy'><i className="fa-solid fa-store"></i> Buy</button>
                         </footer>
 
                 </>

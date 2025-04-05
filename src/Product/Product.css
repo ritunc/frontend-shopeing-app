@@ -4,21 +4,21 @@
         box-sizing: border-box;
 }
 
-.ProductMain {
+/* .ProductMain { */
         /* padding: 0.3rem 0; */
         /* padding: 0rem 0.3rem; */
-        border: 1px solid black;
-}
+        /* border: 1px solid black; */
+/* } */
 
 .ProductMainContainer {
-        border: 1px solid rgb(20, 20, 17);
+        /* border: 1px solid rgb(20, 20, 17); */
         max-width: 1270px;
-        /* margin: 0 auto; */
+        margin: 0 auto;
         padding: 0rem 0.2rem;
-        
-        
+
+
         display: flex;
-        
+
         gap: 10px;
         background-color: #FFFFFF;
         border-radius: 8px;
@@ -27,20 +27,20 @@
 
 
 .ProductMain2ndContainer {
-        border: 1px solid rgb(180, 9, 149);
+        /* border: 1px solid rgb(180, 9, 149); */
         width: 40%;
         display: flex;
         flex-direction: column;
         gap: 10px;
         position: relative;
         /* background-color: fuchsia; */
-        min-height: 80vh;
+        min-height: 100vh;
         /* height: 100vh; */
 }
 
 .ProductMain2ndContainerIn {
         position: relative;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         /* Takes all available space */
         overflow-y: auto;
         /* Enables vertical scrolling */
@@ -49,8 +49,8 @@
         padding: 10px;
         /* max-height: 100vh; */
 
-        flex:1;
-     
+        flex: 1;
+
 
 }
 
@@ -79,9 +79,11 @@
         transition: transform 0.2s ease-in-out;
 
 }
+
 .icon_product:hover {
         transform: scale(1.2);
 }
+
 .icon_product:active {
         color: red;
 }
@@ -93,25 +95,32 @@
 
 }
 
+
 .ProductMainBtn {
-        border: 1px solid black;
+        /* border: 1px solid black; */
 
         display: flex;
         justify-content: center;
-        gap: 10px;
+        /* gap: 10px; */
+
+        max-width: 1270px;
+        background-color: #FFFFFF;
 
         /* max-width: 500px; */
         /* flex:1; */
         /* height:20% */
-        position:fixed;
-        bottom: 0px;
+
+    
+        /* position: sticky;
+        bottom: 0; */ /* It's not necessery to do in here because it's in mediaQuery 645px*/
+
         /* z-index: 1; */
 }
 
 .btnBuy {
         /* width: 100%; */
 
-        padding: 15px 70px;
+        padding: 15px 50px;
         font-size: 1.2rem;
 
         background-color: rgb(8, 169, 8);
@@ -119,8 +128,10 @@
         outline: none;
         color: #FFFFFF;
         display: flex;
-        align-items: center;
+        /* align-items: center; */
+        justify-content: center;
         gap: 5px;
+        width: 50%;
 
 
 }
@@ -128,7 +139,7 @@
 .btnAddToCart {
         /* width: 100%; */
 
-        padding: 15px 70px;
+        padding: 15px 50px;
         font-size: 1.2rem;
 
         background-color: green;
@@ -136,8 +147,10 @@
         outline: none;
         color: #FFFFFF;
         display: flex;
-        align-items: center;
+        /* align-items: center; */
+        justify-content: center;
         gap: 5px;
+        width: 50%;
 
 
 }
@@ -150,7 +163,7 @@
 
 .ProductMain3rdContainerData {
         width: 60%;
-        border: 1px solid black;
+        /* border: 1px solid black; */
 
         display: flex;
         flex-direction: column;
@@ -162,9 +175,10 @@
         gap: 10px;
 
 }
-.PriceContainer{
+
+.PriceContainer {
         display: flex;
-        gap:10px;
+        gap: 10px;
         justify-content: start;
         align-items: center;
 }
@@ -178,7 +192,7 @@
 
         .btnBuy,
         .btnAddToCart {
-                padding: 15px 40px;
+                padding: 15px 20px;
         }
 
 }
@@ -188,7 +202,7 @@
         .btnBuy,
         .btnAddToCart {
                 font-size: 1rem;
-                padding: 15px 40px;
+                padding: 15px 20px;
         }
 
         .ProductMain2ndContainer {
@@ -219,17 +233,21 @@
         }
 
         .ProductMainBtn {
-                /* max-width: 1245px; */
-                /* position: fixed; */
-                /* bottom: 0px; */
-                /* top:460px; */
+
 
                 position: sticky;
                 bottom: 0;
-                gap: 3px;
+                /* gap: 3px; */
         }
-        .icon_product{
+
+        .icon_product {
                 font-size: 15px;
+        }
+
+        .btnBuy,
+        .btnAddToCart {
+                font-size: 1rem;
+                padding: 15px 20px;
         }
 }
 
@@ -237,14 +255,15 @@
 
         .btnBuy,
         .btnAddToCart {
-                font-size: 0.8rem;
-                padding: 12px 35px;
+                font-size: 1rem;
+                padding: 12px 20px;
         }
 
         .ProductMain2ndContainer {
                 gap: 34px;
         }
-        .icon_product{
+
+        .icon_product {
                 font-size: 12px;
         }
 }
@@ -254,6 +273,6 @@
         .btnBuy,
         .btnAddToCart {
                 font-size: 0.8rem;
-                padding: 12px 28px;
+                padding: 12px 20px;
         }
 }
