@@ -63,6 +63,9 @@ const Product = () => {
                                                                         <h1>{locationData.productPrice}</h1>
                                                                         <p>{locationData.productMarketPrice}</p>
                                                                         <p>{locationData.productDiscount}</p>
+                                                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae consequuntur vel animi maiores quia mollitia optio ipsum similique aliquam non, voluptatibus soluta asperiores cum sunt sint rem sapiente reiciendis corporis.
+                                                                                Cum fuga explicabo dolor sed saepe quos! Voluptatibus assumenda eligendi iste quasi, fugiat fuga perferendis ab doloribus dolor quia nulla eum pariatur odit consectetur quos, ipsum recusandae corrupti quibusdam quisquam?
+                                                                                Neque, dicta animi in modi asperiores dolor suscipit magnam. Provident recusandae molestiae, repudiandae ullam repellendus debitis fuga optio assumenda animi quibusdam in, repellat deserunt a asperiores eum inventore quo est?</p>
                                                                 </div>
 
 
