@@ -103,6 +103,8 @@
         /* max-width: 500px; */
         /* flex:1; */
         /* height:20% */
+        position:relative;
+        bottom: 0px;
 }
 
 .btnBuy {
