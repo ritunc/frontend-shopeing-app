@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import NavBar from '../Home/NavBar';
 import './Product.css';
 const Product = () => {
+
+        const navigate = useNavigate() //
+
+
+
         // const param = useParams();
         // console.log({param})
-        const locData = useLocation();
+        const locData = useLocation(); //coming data from Home-main
         let locationData = locData.state;
         console.log("locData::", locationData);
 
@@ -84,7 +89,7 @@ const Product = () => {
                                                 </div>
 
                                                 <div className={isMenuOpen ? 'ProductMainData' : 'ProductMainBtn'}>
-                                                        <button className='btnBuy'><i className="fa-solid fa-store"></i> Buy</button>
+                                                        <button className='btnBuy' onClick={() => navigate('/order', { state: { img:locationData.imageUrl, name: locationData.productName, price: locationData.productPrice, id:locationData.productID}})}><i className="fa-solid fa-store"></i> Buy</button>
                                                         <button className='btnAddToCart'><i className="fa-solid fa-cart-shopping"></i>Add to Cart</button>
                                                 </div>
                                         </div>
@@ -121,7 +126,7 @@ const Product = () => {
                         </main>
                         <footer className={isMenuOpen ? 'ProductMainBtn' : 'ProductMainData'}>
                                 <button className='btnAddToCart'><i className="fa-solid fa-cart-shopping"></i>Add to Cart</button>
-                                <button className='btnBuy'><i className="fa-solid fa-store"></i> Buy</button>
+                                <button className='btnBuy' onClick={() => navigate('/order', { state: { img:locationData.imageUrl, name: locationData.productName, price:locationData.productPrice, id:locationData.productID }})}><i className="fa-solid fa-store"></i> Buy</button>
                         </footer>
 
                 </>
