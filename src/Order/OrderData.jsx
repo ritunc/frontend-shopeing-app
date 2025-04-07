@@ -11,8 +11,9 @@ const OrderData = () => {
 
 
         useEffect(() => {
-                
+
                 alert("width is ", window.innerWidth);
+                console.log(window.innerWidth)
 
         }, [])
 
