@@ -148,8 +148,17 @@
         box-shadow: none;
 }
 
-@media (max-width: 315px) {
+@media (max-width: 310px) {
         .credentialContainer label{
-                font-size: 0.3rem;
+                font-size: 0.7rem;
+        }
+}
+@media (max-width: 288px) {
+        .credentialContainer label{
+                font-size: 0.7rem;
+        }
+
+        .Order2ndContainer{
+                padding:4px 6px;
         }
 }
