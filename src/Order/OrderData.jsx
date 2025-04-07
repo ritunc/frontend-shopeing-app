@@ -9,8 +9,18 @@ const OrderData = () => {
         const product = locaData.state;
 
 
-        const width = window.innerWidth;
-        alert("width is ", width)
+        // Function to update screen size
+        const handleResize = () => {
+                const width = window.innerWidth;
+                alert("width is ", width);
+        };
+
+        useEffect(() => {
+                window.addEventListener('resize', handleResize);
+
+                // Cleanup the event listener on component unmount
+        }, []);
+
         return (<>
 
                 <section className='OrderContainer'>
