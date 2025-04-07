@@ -135,7 +135,7 @@
 
 @media (max-width: 480px) {
         .credentialContainer label{
-                font-size: 0.9rem;
+                font-size: 0.8rem;
         }
 }
 @media (max-width: 288px) {
