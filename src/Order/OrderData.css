@@ -6,7 +6,7 @@
 
 .OrderContainer{
      padding: 1rem 10px;
-     /* height:100vh;    */
+
      min-height: 100vh;
      border:1px solid black;
 }
@@ -14,18 +14,6 @@
 
 .Order2ndContainer{
 
-        /* padding:0.3rem 0; */
-        /* border:1px solid black;
-        background-color: #eceae6;
-        max-width: 300px;
-        margin:50px auto;
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 5px 10px;
-        gap: 10px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        background-color: #D4F8E0; */
 
 
         max-width: 300px;
@@ -52,13 +40,13 @@
 }
 
 .credentialContainer{
-        /* border:1px solid black; */
+     
         padding:0 3px;
         display:flex;
         justify-content: space-between;
         align-items: center;
 
-        /* gap:5px; */
+     
 }
 
 .credentialContainer input {
@@ -66,7 +54,9 @@
         font-size: 0.9rem;
         border: none;
         outline: none;
-        border-bottom: 2px solid black;
+        /* border-bottom: 2px solid black; */
+        border-bottom: 2px solid #333;
+        background: transparent;
 }
 
 
@@ -77,16 +67,15 @@
         display: flex;
         max-width: 300px;
         gap:5px;
-        /* border: 1px solid black; */
+     
 }
 .OrdercardImage{
-        /* border: 1px solid black; */
-        /* max-width: 50px; */
+     
         width:30%;
         display: flex; /*This help child element to fit to the parent element */
 }
 .CardImage{
-            /* border:1px solid black; */
+    
             width: 100%;
   
             object-fit: cover;
@@ -94,24 +83,20 @@
 }
 
 .productINFO2{
-        /* border: 1px solid black; */
+      
         width:70%;
         display: flex;
         justify-content: space-between;
 }
 
 .productDetails{
-        /* border:1px solid black; */
-        /* max-width: 150px; */
+    
         display:flex;
         flex-direction: column;
-        /* padding-right:30px; */
+  
 }
 .product2ndDetails{
-        /* border:1px solid black; */
-        /* max-width: 10px;
-        display:flex;
-        flex-direction: column; */
+  
         padding-right:3px;
 }
 .productDetails p{
@@ -125,8 +110,7 @@
 
 .credentialSubmitContainer {
         max-width: 300px;
-        /* margin: 50px auto; */
-        /* border: 1px solid black; */
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -139,6 +123,7 @@
         background-color: green;
         color: white;
         padding: 5px 0px;
+        font-size: 1rem;
         cursor: pointer;
         border: none;
         outline: none;
@@ -148,9 +133,9 @@
         box-shadow: none;
 }
 
-@media (max-width: 310px) {
+@media (max-width: 480px) {
         .credentialContainer label{
-                font-size: 0.7rem;
+                font-size: 0.9rem;
         }
 }
 @media (max-width: 288px) {
@@ -162,3 +147,151 @@
                 padding:4px 6px;
         }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+      
+      .OrderContainer {
+        padding: 1rem 10px;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .Order2ndContainer {
+        width: 100%;
+        max-width: 400px;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        background-color: #D4F8E0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      .Order2ndContainer h2 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      
+      .credentialContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .credentialContainer input {
+        flex: 1;
+        padding: 5px;
+        font-size: 0.9rem;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid #333;
+        background: transparent;
+      }
+      
+      .productINFO {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+      
+      .OrdercardImage {
+        flex: 1 1 30%;
+        display: flex;
+      }
+      
+      .CardImage {
+        width: 100%;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+      
+      .productINFO2 {
+        flex: 1 1 65%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+      }
+      
+      .productDetails,
+      .product2ndDetails {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .credentialSubmitContainer {
+        display: flex;
+        justify-content: center;
+      }
+      
+      .credentialSubmitContainer button {
+        width: 100%;
+        background-color: green;
+        color: white;
+        padding: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        transition: 0.3s ease;
+      }
+      
+      .credentialSubmitContainer button:active {
+        box-shadow: none;
+      }
+      
+  
+      @media (max-width: 480px) {
+        .Order2ndContainer {
+          padding: 15px;
+        }
+      
+        .productINFO2 {
+          flex-direction: column;
+          gap: 5px;
+        }
+      
+        .productINFO {
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .credentialContainer {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      
+        .credentialContainer label {
+          margin-bottom: 4px;
+        }
+      
+        .CardImage {
+          max-height: 100px;
+        }
+      }
+       */

@@ -29,7 +29,7 @@ const OrderData = () => {
                                         <input type='text' />
                                 </div>
                                 <div className='credentialContainer'>
-                                        <label>PinCode:</label>
+                                        <label>Pin-Code:</label>
                                         <input type='text' />
                                 </div>
                                 <div className='credentialContainer'>
