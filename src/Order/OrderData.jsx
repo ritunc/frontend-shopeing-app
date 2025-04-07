@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './OrderData.css'
 import { useLocation } from 'react-router-dom';
 
@@ -8,14 +8,14 @@ const OrderData = () => {
         console.log(locaData.state);
         const product = locaData.state;
 
-        const width = window.innerWidth;
+
 
         return (<>
 
                 <section className='OrderContainer'>
 
                         <form className='Order2ndContainer'>
-                                <h2>Order Sumery{width}</h2>
+                                <h2>Order Summery</h2>
                                 <div className='credentialContainer'>
                                         <label>Name:</label>
                                         <input type='text' />
