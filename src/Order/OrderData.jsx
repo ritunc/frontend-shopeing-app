@@ -7,6 +7,10 @@ const OrderData = () => {
         const locaData = useLocation()
         console.log(locaData.state);
         const product = locaData.state;
+
+
+        const width = window.innerWidth;
+        alert("width is ", width)
         return (<>
 
                 <section className='OrderContainer'>
