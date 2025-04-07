@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import './OrderData.css'
 import { useLocation } from 'react-router-dom';
 
@@ -9,20 +9,12 @@ const OrderData = () => {
         const product = locaData.state;
 
 
-        // Function to update screen size
-        const handleResize = () => {
-                const width = window.innerWidth;
-                alert("width is ", width);
-        };
 
         useEffect(() => {
-                window.addEventListener('resize', handleResize);
+                
+                alert("width is ", window.innerWidth);
 
-                // Cleanup the event listener on component unmount
-                return () => {
-                        window.removeEventListener('resize', handleResize);
-                };
-        }, []);
+        }, [])
 
         return (<>
 
