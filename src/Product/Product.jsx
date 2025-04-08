@@ -70,7 +70,7 @@ const Product = () => {
                                                                 <p>{locationData.productName}</p>
                                                                 <p><span style={{ color: 'gray' }}>#JustHere</span></p>
                                                                 <div className='PriceContainer another1'>
-                                                                        <p className='Ratebox'>{locationData.productRate}.9 <i class="fa-solid fa-star fa-small"></i></p>
+                                                                        <p className='Ratebox'>{locationData.productRate}.9 <i className="fa-solid fa-star fa-small"></i></p>
                                                                         <br />
                                                                         <p>6,9000</p>
                                                                         <p>Rating &</p>
@@ -83,6 +83,7 @@ const Product = () => {
                                                                         <p><span style={{ textDecoration: "line-through", color: 'gray' }}>&#8377;{locationData.productMarketPrice}</span></p>
                                                                         <p><span style={{ color: 'green' }}>{locationData.productDiscount} off</span></p>
                                                                 </div>
+                                                                <p><span style={{ color: '#1ea7c0'}}><i className="fa-solid fa-truck"></i></span> <span style={{ fontWeight: 'bold'}}> FREE </span>Delivery <span  style={{ textDecoration: "line-through", color: 'gray', fontSize: '0.8rem' }}>&#8377;40</span></p>
                                                                 <p style={{ fontSize: '0.8rem'}}>Secure delivery by {withIn2_DAY.format('D MMMM, dddd, YYYY')}</p>
 
 
