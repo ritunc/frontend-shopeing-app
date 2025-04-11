@@ -9,6 +9,7 @@ const Product = () => {
         const navigate = useNavigate() //
 
         const bole = useSelector(state => state.boolean);
+        console.log("Booleann:::", bole)
 
         // const param = useParams();
         // console.log({param})
@@ -19,6 +20,19 @@ const Product = () => {
         const [screenSize, setScreenSize] = useState(window.innerWidth);
         const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+
+        const BuyProduct = () => {
+
+                if(bole === true){
+
+                        navigate('/order', { state: { img: locationData.imageUrl, name: locationData.productName, price: locationData.productPrice, id: locationData.productID } })
+
+                } else {
+
+                        alert("Please LogIn First")
+                }
+
+        }
 
 
         // Function to update screen size
@@ -94,7 +108,7 @@ const Product = () => {
                                                 </div>
 
                                                 <div className={isMenuOpen ? 'ProductMainData' : 'ProductMainBtn'}>
-                                                        <button className='btnBuy' onClick={() => navigate('/order', { state: { img: locationData.imageUrl, name: locationData.productName, price: locationData.productPrice, id: locationData.productID } })}><i className="fa-solid fa-store"></i> Buy</button>
+                                                        <button className='btnBuy' onClick={BuyProduct}><i className="fa-solid fa-store"></i> Buy</button>
                                                         <button className='btnAddToCart'><i className="fa-solid fa-cart-shopping"></i>Add to Cart</button>
                                                 </div>
                                         </div>
@@ -131,7 +145,7 @@ const Product = () => {
                         </main>
                         <footer className={isMenuOpen ? 'ProductMainBtn' : 'ProductMainData'}>
                                 <button className='btnAddToCart'><i className="fa-solid fa-cart-shopping"></i>Add to Cart</button>
-                                <button className='btnBuy' onClick={() => navigate('/order', { state: { img: locationData.imageUrl, name: locationData.productName, price: locationData.productPrice, id: locationData.productID } })}><i className="fa-solid fa-store"></i> Buy</button>
+                                <button className='btnBuy' onClick={BuyProduct}><i className="fa-solid fa-store"></i> Buy</button>
                         </footer>
 
                 </>

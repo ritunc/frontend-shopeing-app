@@ -34,13 +34,13 @@ const Admin = () => {
 
                 try {
 
-                        const USER_DATA_URL = process.env.REACT_APP_USER_DATA_URL;
-                        if (!USER_DATA_URL) {
-                                console.error("USER_DATA_URL is undefined. Check your .env file.");
-                                return;
-                        }
+                        // const USER_DATA_URL = process.env.REACT_APP_USER_DATA_URL;
+                        // if (!USER_DATA_URL) {
+                        //         console.error("USER_DATA_URL is undefined. Check your .env file.");
+                        //         return;
+                        // }
 
-                        const response = await axios.post(`${USER_DATA_URL}/SignUp`, Data, { headers: { "Content-Type": "application/json" } });
+                        const response = await axios.post(`https://shopeing-user-auth.vercel.app/SignUp`, Data, { headers: { "Content-Type": "application/json" } });
 
                         console.log("Data::::", response);
 
@@ -57,13 +57,13 @@ const Admin = () => {
                 e.preventDefault();
                 try {
                         
-                        const USER_DATA_URL = process.env.REACT_APP_USER_DATA_URL;
-                        if (!USER_DATA_URL) {
-                                console.error("USER_DATA_URL is undefined. Check your .env file.");
-                                return;
-                        }
+                        // const USER_DATA_URL = process.env.REACT_APP_USER_DATA_URL;
+                        // if (!USER_DATA_URL) {
+                        //         console.error("USER_DATA_URL is undefined. Check your .env file.");
+                        //         return;
+                        // }
 
-                        const response = await axios.post(`${USER_DATA_URL}/LogInData`, LogInData,
+                        const response = await axios.post(`https://shopeing-user-auth.vercel.app/LogInData`, LogInData,
                                 {
                                         headers: { "Content-Type": "application/json" },
                                         withCredentials: true  /* The cookie is sent automatically in future requests (if withCredentials: true is enabled in Axios). */

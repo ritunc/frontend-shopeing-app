@@ -58,7 +58,7 @@ nav {
 }
 
 .navbarImage {
-        border: 1px solid rgb(9, 10, 10);
+        /* border: 1px solid rgb(9, 10, 10); */
         /* width:100%; */
         object-fit: fill;
         max-width: 40px;
@@ -274,7 +274,7 @@ ul {
 
 .HomeMain {
         padding: 0.3rem 0;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         /* display: flex; */
         /* flex-direction: column; */
         /* flex-wrap: wrap; */

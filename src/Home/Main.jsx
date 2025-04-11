@@ -43,9 +43,6 @@ const Main = () => {
 
 
 
-
-
-
                         //Access the cookie from browser and then send to server to verify
                         const cooki = Cookies.get("uid");
                         const Cookie = {
@@ -53,13 +50,10 @@ const Main = () => {
                         }
                         console.log("Cookies:::", cooki);
 
-                        if (!cooki) {
+                        if (cooki) {
                                 alert("Please fill the form")
 
-                        } else {
-
-                                //send to server to verify
-                                const response2 = await axios.post("http://localhost:6082/cookieVerify", Cookie, {
+                                const response2 = await axios.post("https://shopeing-user-auth.vercel.app/cookieVerify", Cookie, {
                                         headers: { "Content-Type": "application/json" }
                                 });
 
@@ -78,18 +72,8 @@ const Main = () => {
 
                         }
 
-
-
-
-
-
-
-
-
-
-
-
                 }
+
                 fetchData();
 
 
@@ -102,42 +86,6 @@ const Main = () => {
         // }, [item]);
 
         const addItem = async (curElem) => {
-
-
-                //Access the cookie from browser and then send to server to verify
-                // const cooki = Cookies.get("uid");
-                // const Cookie = {
-                //         Cookie_data: cooki,
-                // }
-                // console.log("Cookies:::", cooki);
-
-                // if (!cooki) {
-                //         alert("Please fill the form")
-
-                // } else {
-
-                //         //send to server to verify
-                //         const response2 = await axios.post("http://localhost:6082/cookieVerify", Cookie, {
-                //                 headers: { "Content-Type": "application/json" }
-                //         });
-
-                //         console.log("response2:::", response2);
-                //         if (response2.data.Boolean.boole && response2.data.Boolean.cookie_verify_data) {
-
-                //                 console.log("Hello we Entered:::");
-                //                 // console.log("userName:::", response2.data.Boolean.cookie_verify_data.userName,"email:::",response2.data.Boolean.cookie_verify_data.email);
-                //                 dispatch(boolean({ boole: response2.data.Boolean.boole }));
-                //                 dispatch(cookie_Convert({ userName: response2.data.Boolean.cookie_verify_data.userName, email: response2.data.Boolean.cookie_verify_data.email }));
-
-                //         } else if (response2.data.Boolean) {
-
-                //                 dispatch(boolean({ boole: response2.data.Boolean }));
-                //         }
-
-                // }
-
-
-
 
 
                 // console.log("productName", productName, "productID::", productID);
