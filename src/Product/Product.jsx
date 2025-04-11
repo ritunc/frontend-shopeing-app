@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 import NavBar from '../Home/NavBar';
 import './Product.css';
 import dayjs from 'dayjs';
@@ -7,7 +8,7 @@ const Product = () => {
 
         const navigate = useNavigate() //
 
-
+        const bole = useSelector(state => state.boolean);
 
         // const param = useParams();
         // console.log({param})
@@ -83,8 +84,8 @@ const Product = () => {
                                                                         <p><span style={{ textDecoration: "line-through", color: 'gray' }}>&#8377;{locationData.productMarketPrice}</span></p>
                                                                         <p><span style={{ color: 'green' }}>{locationData.productDiscount} off</span></p>
                                                                 </div>
-                                                                <p><span style={{ color: '#1ea7c0'}}><i className="fa-solid fa-truck"></i></span> <span style={{ fontWeight: 'bold'}}> FREE </span>Delivery <span  style={{ textDecoration: "line-through", color: 'gray', fontSize: '0.8rem' }}>&#8377;40</span></p>
-                                                                <p style={{ fontSize: '0.8rem'}}>Secure delivery by {withIn2_DAY.format('D MMMM, dddd, YYYY')}</p>
+                                                                <p><span style={{ color: '#1ea7c0' }}><i className="fa-solid fa-truck"></i></span> <span style={{ fontWeight: 'bold' }}> FREE </span>Delivery <span style={{ textDecoration: "line-through", color: 'gray', fontSize: '0.8rem' }}>&#8377;40</span></p>
+                                                                <p style={{ fontSize: '0.8rem' }}>Secure delivery by {withIn2_DAY.format('D MMMM, dddd, YYYY')}</p>
 
 
 

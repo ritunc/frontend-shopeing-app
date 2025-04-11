@@ -26,10 +26,10 @@ const Main = () => {
 
 
 
-    
 
-   //https://backend-product-server.vercel.app
-   //http://localhost:6079
+
+        //https://backend-product-server.vercel.app
+        //http://localhost:6079
 
         useEffect(() => {
 
@@ -38,11 +38,60 @@ const Main = () => {
                         const response = await axios.get("https://backend-product-server.vercel.app/product", {
                                 headers: { "Content-Type": "application/json" }
                         });
-        
+
                         setItem(response.data);
-        
+
+
+
+
+
+
+                        //Access the cookie from browser and then send to server to verify
+                        const cooki = Cookies.get("uid");
+                        const Cookie = {
+                                Cookie_data: cooki,
+                        }
+                        console.log("Cookies:::", cooki);
+
+                        if (!cooki) {
+                                alert("Please fill the form")
+
+                        } else {
+
+                                //send to server to verify
+                                const response2 = await axios.post("http://localhost:6082/cookieVerify", Cookie, {
+                                        headers: { "Content-Type": "application/json" }
+                                });
+
+                                console.log("response2:::", response2);
+                                if (response2.data.Boolean.boole && response2.data.Boolean.cookie_verify_data) {
+
+                                        console.log("Hello we Entered:::");
+                                        // console.log("userName:::", response2.data.Boolean.cookie_verify_data.userName,"email:::",response2.data.Boolean.cookie_verify_data.email);
+                                        dispatch(boolean({ boole: response2.data.Boolean.boole }));
+                                        dispatch(cookie_Convert({ userName: response2.data.Boolean.cookie_verify_data.userName, email: response2.data.Boolean.cookie_verify_data.email }));
+
+                                } else if (response2.data.Boolean) {
+
+                                        dispatch(boolean({ boole: response2.data.Boolean }));
+                                }
+
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
                 }
                 fetchData();
+
 
         }, []);
 
@@ -56,36 +105,36 @@ const Main = () => {
 
 
                 //Access the cookie from browser and then send to server to verify
-                // const cooki = Cookies.get("uid");
-                // const Cookie = {
-                //         Cookie_data: cooki,
-                // }
-                // console.log("Cookies:::", cooki);
+                const cooki = Cookies.get("uid");
+                const Cookie = {
+                        Cookie_data: cooki,
+                }
+                console.log("Cookies:::", cooki);
 
-                // if (!cooki) {
-                //         alert("Please fill the form")
+                if (!cooki) {
+                        alert("Please fill the form")
 
-                // } else {
+                } else {
 
-                //         //send to server to verify
-                //         const response2 = await axios.post("http://localhost:6082/cookieVerify", Cookie, {
-                //                 headers: { "Content-Type": "application/json" }
-                //         });
+                        //send to server to verify
+                        const response2 = await axios.post("http://localhost:6082/cookieVerify", Cookie, {
+                                headers: { "Content-Type": "application/json" }
+                        });
 
-                //         console.log("response2:::", response2);
-                //         if (response2.data.Boolean.boole && response2.data.Boolean.cookie_verify_data) {
+                        console.log("response2:::", response2);
+                        if (response2.data.Boolean.boole && response2.data.Boolean.cookie_verify_data) {
 
-                //                 console.log("Hello we Entered:::");
-                //                 // console.log("userName:::", response2.data.Boolean.cookie_verify_data.userName,"email:::",response2.data.Boolean.cookie_verify_data.email);
-                //                 dispatch(boolean({ boole: response2.data.Boolean.boole }));
-                //                 dispatch(cookie_Convert({ userName: response2.data.Boolean.cookie_verify_data.userName, email: response2.data.Boolean.cookie_verify_data.email }));
+                                console.log("Hello we Entered:::");
+                                // console.log("userName:::", response2.data.Boolean.cookie_verify_data.userName,"email:::",response2.data.Boolean.cookie_verify_data.email);
+                                dispatch(boolean({ boole: response2.data.Boolean.boole }));
+                                dispatch(cookie_Convert({ userName: response2.data.Boolean.cookie_verify_data.userName, email: response2.data.Boolean.cookie_verify_data.email }));
 
-                //         } else if (response2.data.Boolean) {
+                        } else if (response2.data.Boolean) {
 
-                //                 dispatch(boolean({ boole: response2.data.Boolean }));
-                //         }
+                                dispatch(boolean({ boole: response2.data.Boolean }));
+                        }
 
-                // }
+                }
 
 
 
