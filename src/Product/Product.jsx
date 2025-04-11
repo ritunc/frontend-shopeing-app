@@ -77,7 +77,7 @@ const Product = () => {
                                         <div className='ProductMain2ndContainer'>
                                                 <div className={isMenuOpen ? 'ProductMain2ndContainerIn' : ''}>
                                                         {/* <i className="fa-regular fa-heart " /> */}
-                                                        <i className="fa-solid fa-heart icon_product" ></i>
+                                                        <i className="fa-solid fa-heart icon_product" onClick={BuyProduct}></i>
                                                         <img src={locationData.imageUrl} alt={locationData.ProductName} className='ProductMainContainerImg' />
 
                                                         <div className={isMenuOpen ? 'ProductMain3rdContainerData' : 'ProductMainData'}>
